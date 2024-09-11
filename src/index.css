@@ -338,9 +338,10 @@ tr:nth-child(even) {
 
 
 .footer-banner {
-  background-color: red;
+  background-color: rgb(63, 10, 99);
   text-align: center;
   padding: 10px 0;
+  justify-content: space-around;
 }
 
 .footer-banner p {
@@ -363,10 +364,6 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
-
-.dark footer-content .left img {
-  filter: sepia(1) saturate(1000%) hue-rotate(180deg);
 }
 
 .footer-content .left {
