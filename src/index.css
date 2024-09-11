@@ -392,3 +392,20 @@ footer {
 .redLetter {
   color: red;
 }
+
+.card {
+  width: 100%; /* Asegura que la tarjeta ocupe el 100% del espacio disponible */
+  max-width: 300px; /* O un valor máximo según el diseño que quieras */
+  border: 1px solid #ccc;
+  padding: 16px;
+  text-align: center; /* Centra el contenido dentro de la tarjeta */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 16px auto;
+}
+
+.card h3 {
+  font-size: 1.2rem; /* Ajusta el tamaño del texto según sea necesario */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  overflow: hidden; /* Oculta el texto si es demasiado largo */
+  text-overflow: ellipsis; /* Añade puntos suspensivos si el texto es demasiado largo */
+}

@@ -6,15 +6,13 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Card = ({ dentist, deletable }) => {
   const { dispatch } = useDentistStates();
-  
-  // Estado para controlar si está en favoritos
+
   const [isFavorited, setIsFavorited] = useState(false);
 
-  // Efecto para verificar si el dentista ya está en localStorage
   useEffect(() => {
     const localFavs = JSON.parse(localStorage.getItem('localFavs')) || [];
     if (localFavs.some(savedDentist => savedDentist.id === dentist.id)) {
-      setIsFavorited(true); // Si ya está en favoritos, lo marcamos como tal
+      setIsFavorited(true);
     }
   }, [dentist.id]);
 
@@ -27,7 +25,7 @@ const Card = ({ dentist, deletable }) => {
       localFavs.push(newDentist);
       localStorage.setItem('localFavs', JSON.stringify(localFavs));
       dispatch({ type: "ADD_DENTIS", payload: newDentist });
-      setIsFavorited(true); // Pinta de amarillo cuando se agrega
+      setIsFavorited(true);
     } else {
       alert('This dentist is already a favorite');
     }
@@ -38,14 +36,17 @@ const Card = ({ dentist, deletable }) => {
     const newList = localFavs.filter((savedDentist) => savedDentist.id !== dentist.id);
     localStorage.setItem('localFavs', JSON.stringify(newList));
     dispatch({ type: "DEL_DENTIST", payload: dentist.id });
-    setIsFavorited(false); // Vuelve a gris al eliminarlo
+    setIsFavorited(false);
   };
 
   return (
     <div className="card">
       <img src={doctor} alt="" />
-      <Link to={`/dentist/${dentist.id}`}>{dentist.name}</Link>
+      <h3>{dentist.name}</h3> {/* Ahora solo muestra el nombre sin enlace */}
       <p>{dentist.username}</p>
+
+      {/* Añadir el nuevo enlace "View Details" */}
+      <Link to={`/dentist/${dentist.id}`}>View Details</Link>
 
       {deletable ? (
         <button onClick={delFav} className="favButton">
