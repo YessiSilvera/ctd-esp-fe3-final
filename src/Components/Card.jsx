@@ -45,7 +45,7 @@ const Card = ({ dentist, deletable }) => {
         {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle ✅*/}
         <img src={doctor} alt="" />
         <Link to={`/dentist/${dentist.id}`}>{dentist.name}</Link>
-        <p>ID: {dentist.id} / User: {dentist.username}</p>
+        <p>{dentist.username}</p>
 
         {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
         {deletable ? (<button onClick={delFav} className="favButton">Delete fav</button>) 

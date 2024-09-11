@@ -5,11 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('https://www.hdwallpapers.in/download/teal_pattern-HD.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: white; 
+  background-size: auto;   
+  background-position: initial; 
+  background-repeat: no-repeat; 
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -334,4 +335,55 @@ tr:nth-child(even) {
   background-color: yellow;
   box-shadow: none;
   
+}
+
+
+.footer-banner {
+  background-color: red;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.footer-banner p {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+footer {
+  padding: 20px;
+  background-color: #f1f1f1; 
+  margin-top: 20px;
+  display:flex;
+  flex-direction: column;
+
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-content .left {
+  display: flex;
+  align-items: center;
+}
+
+.footer-content .left img {
+  width: 100px;
+  height: auto;
+  margin-left: 10px;
+}
+
+.footer-content .right img {
+  margin-left: 10px;
+  width: 30px;
+  height: auto;
+}
+
+.footer-content .right {
+  display: flex;
+  align-items: center;
 }
