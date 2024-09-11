@@ -90,8 +90,7 @@ footer {
   bottom: 0;
   width: 100%;
   height: 10vh;
-
-  background-color: #d8d8d8;
+  background-color: #e28a8a;
   transition: background-color 0.5s ease;
 }
 
@@ -269,7 +268,7 @@ tr:nth-child(even) {
 }
 
 .dark footer{
-  background-color: #000;
+  background-color: #462a61;
 }
 
 /* themeSwitch  */
@@ -353,7 +352,7 @@ tr:nth-child(even) {
 
 footer {
   padding: 20px;
-  background-color: #f1f1f1; 
+  background-color: #c8b3f8; 
   margin-top: 20px;
   display:flex;
   flex-direction: column;
@@ -366,6 +365,10 @@ footer {
   align-items: center;
 }
 
+.dark footer-content .left img {
+  filter: sepia(1) saturate(1000%) hue-rotate(180deg);
+}
+
 .footer-content .left {
   display: flex;
   align-items: center;
@@ -374,6 +377,7 @@ footer {
 .footer-content .left img {
   width: 100px;
   height: auto;
+
   margin-left: 10px;
 }
 
